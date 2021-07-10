@@ -1,0 +1,29 @@
+{
+  "workouts": [
+    {
+      "text": "test",
+      "muscles": "",
+      "sets": "",
+      "reps": "",
+      "weight": "",
+      "weightUnit": "",
+      "distance": "",
+      "distanceUnit": "",
+      "duration": "",
+      "durationUnit": "",
+      "comments": "",
+      "id": 1
+    },
+    {
+      "text": "asdf",
+      "muscles": [],
+      "sets": "",
+      "reps": "",
+      "weight": "",
+      "distance": "",
+      "duration": "",
+      "comments": "",
+      "id": 2
+    }
+  ]
+}
