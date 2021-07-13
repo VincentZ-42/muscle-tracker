@@ -1,17 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Multiselect from 'multiselect-react-dropdown';
 
 const AddWorkout = ({ onAdd }) => {
   const [text, setText] = useState('');
-  const [muscles, setMuscles] = useState('');
-  const [sets, setSets] = useState('');
-  const [reps, setReps] = useState('');
+  const [muscles, setMuscles] = useState([]);
+  const [sets, setSets] = useState('5');
+  const [reps, setReps] = useState('5');
   const [weight, setWeight] = useState('');
-  const [weightUnit, setWeightUnit] = useState('');
+  const [weightUnit, setWeightUnit] = useState('lbs');
   const [distance, setDistance] = useState('');
-  const [distanceUnit, setDistanceUnit] = useState('');
+  const [distanceUnit, setDistanceUnit] = useState('miles');
   const [duration, setDuration] = useState('');
-  const [durationUnit, setDurationUnit] = useState('');
+  const [durationUnit, setDurationUnit] = useState('min');
   const [comments, setComments] = useState('');
 
   const MUSCLE_OPTIONS = [
@@ -43,11 +43,21 @@ const AddWorkout = ({ onAdd }) => {
     "gluteus medius"
   ];
 
+  // This console logs your muscles array anytime
+  // it is changed
+  useEffect(() => {
+    console.log(muscles);
+  }, [muscles]);
+
   const onSubmit = (e) => {
     e.preventDefault();
 
     if (!text) {
       alert('Please add a task');
+      return ;
+    }
+    if (!muscles.length) {
+      alert('Please add target muscles');
       return ;
     }
 
@@ -68,14 +78,14 @@ const AddWorkout = ({ onAdd }) => {
 
     setText('');
     setMuscles([]);
-    setSets('');
-    setReps('');
+    setSets('5');
+    setReps('5');
     setWeight('');
-    setWeightUnit();
+    setWeightUnit('lbs');
     setDistance('');
-    setDistanceUnit();
+    setDistanceUnit('miles');
     setDuration('');
-    setDurationUnit();
+    setDurationUnit('min');
     setComments('');
   }
 
@@ -116,7 +126,9 @@ const AddWorkout = ({ onAdd }) => {
           value={weight}
           onChange={(e) => setWeight(e.target.value)}
         ></input>
-        <select name='weightUnit'>
+        <select name='weightUnit'
+            value={weightUnit}
+            onChange={(e) => setWeightUnit(e.target.value)}>
           <option value='lbs'>lbs</option>
           <option value='kg'>kg</option>
         </select>
@@ -129,7 +141,9 @@ const AddWorkout = ({ onAdd }) => {
           value={distance}
           onChange={(e) => setDistance(e.target.value)}
         ></input>
-        <select name='distanceUnit'>
+        <select name='distanceUnit'
+          value={distanceUnit}
+          onChange={(e) => setDistanceUnit(e.target.value)}>
           <option value='miles'>miles</option>
           <option value='km'>km</option>
         </select>
@@ -142,7 +156,9 @@ const AddWorkout = ({ onAdd }) => {
           value={duration}
           onChange={(e) => setDuration(e.target.value)}
         ></input>
-        <select name='durationUnit'>
+        <select name='durationUnit'
+          value={durationUnit}
+          onChange={(e) => setDurationUnit(e.target.value)}>
           <option value='mins'>min</option>
           <option value='hrs'>hr</option>
         </select>
@@ -155,8 +171,9 @@ const AddWorkout = ({ onAdd }) => {
           placeholder='Select Target Muscles'
           options={MUSCLE_OPTIONS.sort()}
           selectedValues={muscles}
-          onSelect={(selectedItem) => setMuscles([...muscles, selectedItem])}
-          onChange={(e) => setMuscles([...muscles, e.target.value])}
+          onSelect={(selectedItems) => setMuscles(selectedItems)}
+          onRemove={(selectedItems) => setMuscles(selectedItems)}
+          onChange={(e) => setMuscles(e.target.value)}
         />
       </div>
       <div className='form-control'>

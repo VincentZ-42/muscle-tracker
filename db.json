@@ -2,28 +2,51 @@
   "workouts": [
     {
       "text": "test",
-      "muscles": "",
+      "muscles": [
+        "anterior delts"
+      ],
       "sets": "",
       "reps": "",
       "weight": "",
-      "weightUnit": "",
+      "weightUnit": "lbs",
       "distance": "",
-      "distanceUnit": "",
+      "distanceUnit": "miles",
       "duration": "",
-      "durationUnit": "",
+      "durationUnit": "min",
       "comments": "",
       "id": 1
     },
     {
-      "text": "asdf",
-      "muscles": [],
-      "sets": "",
-      "reps": "",
+      "text": "test",
+      "muscles": [
+        "calves"
+      ],
+      "sets": "5",
+      "reps": "5",
       "weight": "",
+      "weightUnit": "lbs",
       "distance": "",
+      "distanceUnit": "miles",
       "duration": "",
+      "durationUnit": "min",
       "comments": "",
       "id": 2
+    },
+    {
+      "text": "test3",
+      "muscles": [
+        "heart"
+      ],
+      "sets": "4",
+      "reps": "7",
+      "weight": "",
+      "weightUnit": "lbs",
+      "distance": "",
+      "distanceUnit": "miles",
+      "duration": "",
+      "durationUnit": "min",
+      "comments": "",
+      "id": 3
     }
   ]
 }

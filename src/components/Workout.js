@@ -23,7 +23,9 @@ const Workout = ({ workout, onDelete, onEdit }) => {
         <p>{workout.weight ? 'Weight = ' + workout.weight : '' }</p>
         <p>{workout.distance ? 'Distance = ' + workout.distance : '' }</p>
         <p>{workout.duration ? 'Duration = ' + workout.duration : '' }</p>
-        <p>{workout.muscles}</p>
+        <p>[ {workout.weightUnit}, {workout.distanceUnit}, {workout.durationUnit} ]</p>
+        <p>{'Muscles = ' + workout.muscles.join(' | ')}</p>
+        <p>{workout.comments ? 'Comments = ' + workout.comments : '' }</p>
       </div>
     </>
   )
