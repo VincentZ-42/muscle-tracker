@@ -1,25 +1,26 @@
 {
   "workouts": [
     {
-      "text": "test",
+      "text": "Push Up",
       "muscles": [
-        "anterior delts"
+        "biceps",
+        "triceps"
       ],
-      "sets": "",
-      "reps": "",
-      "weight": "",
+      "sets": "5",
+      "reps": "5",
+      "weight": "180",
       "weightUnit": "lbs",
       "distance": "",
       "distanceUnit": "miles",
       "duration": "",
       "durationUnit": "min",
-      "comments": "",
+      "comments": "Regular normal pushups",
       "id": 1
     },
     {
       "text": "test",
       "muscles": [
-        "calves"
+        "anterior delts"
       ],
       "sets": "5",
       "reps": "5",
@@ -31,22 +32,6 @@
       "durationUnit": "min",
       "comments": "",
       "id": 2
-    },
-    {
-      "text": "test3",
-      "muscles": [
-        "heart"
-      ],
-      "sets": "4",
-      "reps": "7",
-      "weight": "",
-      "weightUnit": "lbs",
-      "distance": "",
-      "distanceUnit": "miles",
-      "duration": "",
-      "durationUnit": "min",
-      "comments": "",
-      "id": 3
     }
   ]
 }

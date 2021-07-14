@@ -139,3 +139,17 @@ footer {
   height: 40px;
   padding: 3px 7px;
 }
+
+.button-holder {
+  display: flex;
+  font-size: 30px;
+  padding: 10px 20px;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.button-holder button {
+  border-radius: 80%;
+  width: 40px;
+  background-color: salmon;
+}
