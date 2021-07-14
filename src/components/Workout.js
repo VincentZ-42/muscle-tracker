@@ -59,7 +59,7 @@ const Workout = ({ workout, onDelete, onEdit }) => {
         <div className='button-holder' id='setBtns'>
           {createButtons(workout)}
         </div>
-        <p>{workout.comments ? 'Comments = ' + workout.comments : '' }</p>
+        <p>{workout.comments ? workout.comments : '' }</p>
       </div>
     </>
   )

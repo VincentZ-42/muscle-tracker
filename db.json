@@ -16,22 +16,6 @@
       "durationUnit": "min",
       "comments": "Regular normal pushups",
       "id": 1
-    },
-    {
-      "text": "test",
-      "muscles": [
-        "anterior delts"
-      ],
-      "sets": "5",
-      "reps": "5",
-      "weight": "",
-      "weightUnit": "lbs",
-      "distance": "",
-      "distanceUnit": "miles",
-      "duration": "",
-      "durationUnit": "min",
-      "comments": "",
-      "id": 2
     }
   ]
 }
